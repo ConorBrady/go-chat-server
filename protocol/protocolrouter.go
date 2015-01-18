@@ -20,12 +20,11 @@ func (r *Router) Route(identifier string, request <-chan byte, response chan<- b
 
 	if ok {
 		return protocol.Handle(request,response)
-	} else {
-		error(ERROR_UNKNOWN_PROTOCOL,response)
-		channel := make(chan StatusCode,1)
-		channel <- STATUS_ERROR
-		return channel
 	}
+	error(ERROR_UNKNOWN_PROTOCOL,response)
+	channel := make(chan StatusCode,1)
+	channel <- STATUS_ERROR
+	return channel
 }
 
 func (r *Router) AddProtocol(protocol Protocol) {

@@ -6,7 +6,7 @@ import(
     "bufio"
     "log"
     "strconv"
-    "../protocol"
+    "github.com/conorbrady/go-chat-server/protocol"
     )
 
 type TCPServer struct {

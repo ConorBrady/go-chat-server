@@ -2,7 +2,7 @@ package protocol
 
 import(
 	"regexp"
-	"../chat"
+	"github.com/conorbrady/go-chat-server/chat"
 	"strconv"
 	"fmt"
 	)

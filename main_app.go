@@ -4,9 +4,9 @@ import(
     "flag"
     "log"
     "os"
-    "./tcpserver"
-    "./protocol"
-    "./chat"
+    "github.com/conorbrady/go-chat-server/tcpserver"
+    "github.com/conorbrady/go-chat-server/protocol"
+    "github.com/conorbrady/go-chat-server/chat"
     )
 
 func main (){

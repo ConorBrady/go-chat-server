@@ -64,8 +64,6 @@ func (c *Chat)Rooms() []*ChatRoom {
 func (c *Chat)RoomForRef(ref int) ( *ChatRoom, bool ) {
 	if len(c.rooms) > ref {
 		return c.rooms[ref], true
-	} else {
-		return &ChatRoom{}, false
 	}
-
+	return &ChatRoom{}, false
 }

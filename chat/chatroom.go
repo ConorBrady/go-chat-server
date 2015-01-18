@@ -47,7 +47,6 @@ func (r *ChatRoom)Add(client *ChatClient) <-chan int {
 func (r *ChatRoom)ClientForJoinId(joinId int) (*ChatClient, bool) {
 	if len(r.clients) > joinId && r.clients[joinId].Valid() {
 		return r.clients[joinId], true
-	} else {
-		return &ChatClient{}, false
 	}
+	return &ChatClient{}, false
 }
